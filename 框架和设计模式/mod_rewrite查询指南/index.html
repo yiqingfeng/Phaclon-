@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mod_rewrtie Cheat Sheet</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="g-doc container">
+		<div class="title">
+			<h1>mod_rewrite备忘录</h1>
+		</div>
+		<div class="link">
+			<strong>参考文章:</strong>
+			<a href="http://www.cheatography.com/davechild/cheat-sheets/mod-rewrite/">mod_rewrite Cheat Sheet by DaveChild</a>
+		</div>
+		<table class="m-sheet-output">
+			<tbody>
+				<tr>
+					<td class="sheets">
+						<div class="sheet-output">
+							<h3>mod_rewrite Tutorials</h3>
+							<ul class="list">
+								<li><a href="http://httpd.apache.org/docs/current/rewrite/" target="_blank">http:/&shy;/ht&shy;tpd.ap&shy;ach&shy;e.o&shy;rg/&shy;doc&shy;s/c&shy;urr&shy;ent&shy;/re&shy;write/</a></li>
+								<li><a href="http://www.addedbytes.com/for-beginners/url-rewriting-for-beginners/" target="_blank">http:/&shy;/ww&shy;w.a&shy;dde&shy;dby&shy;tes.co&shy;m/f&shy;or-&shy;beg&shy;inn&shy;ers&shy;/ur&shy;l-r&shy;ewr&shy;iti&shy;ng-&shy;for&shy;-be&shy;gin&shy;ners/</a></li>
+								<li><a href="http://net.tutsplus.com/tutorials/other/a-deeper-look-at-mod_rewrite-for-apache/" target="_blank">http:/&shy;/ne&shy;t.t&shy;uts&shy;plu&shy;s.c&shy;om/&shy;tut&shy;ori&shy;als&shy;/ot&shy;her&shy;/a-&shy;dee&shy;per&shy;-lo&shy;ok-&shy;at-&shy;mod&shy;_re&shy;wri&shy;te-&shy;for&shy;-ap&shy;ache/</a></li>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>mod_rewrite RewriteRule Flags</h3>
+							<ul class="list">
+								<!-- <li class="clearFix">
+									<div class="left">C</div>
+									<div class="right">Chained with next rule</div>
+								</li> -->
+								<script type="text/javascript">
+									var list = {
+										'C': 'Chained with next rule',
+										'CO=cookie': 'Set specified cookie',
+										'E=var:value': 'Set environmental variable “var” to “value”',
+										'F': 'Forbidden (403 header)',
+										'G': 'Gone - no longer exists',
+										'H=handler': 'Set handler',
+										'L': 'Last - stop processing rules',
+										'N': 'Next - continue processing',
+										'NC': 'Case insensitive',
+										'NE': 'Do not escape output',
+										'NS': 'Ignore if subrequest',
+										'P': 'Proxy',
+										'PT': 'Pass through',
+										'R[=code]': 'Redirect to new URL, with optional code (see below)',
+										'QSA': 'Append query string',
+										'S=x': 'Skip next x rules',
+										'T=mimetype': 'Set mime type'
+									}
+									for(var key in list){
+										document.write('<li class="clearFix"><div class="left">'+key+'</div><div class="right">'+list[key]+'</div></li>');
+									}
+								</script>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>mod_rewrite RewriteCond Flags</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = {
+										'NC': 'Case insensitive',
+										'OR': "Combine with next rule using 'OR' instead of the default of 'AND'"
+									}
+									for(var key in list){
+										document.write('<li class="clearFix"><div class="left">'+key+'</div><div class="right">'+list[key]+'</div></li>');
+									}
+								</script>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>Redirection Header Codes</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = {
+										'301': 'Moved permanently',
+										'302': 'Moved temporarily (default)'
+									}
+									for(var key in list){
+										document.write('<li class="clearFix"><div class="left">'+key+'</div><div class="right">'+list[key]+'</div></li>');
+									}
+								</script>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>mod_rewrite Directives</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = {
+										'RewriteEngine': 'RewriteMap',
+										'RewriteOptions': 'RewriteBase',
+										'RewriteLog': 'RewriteCond',
+										'RewriteLogLevel': 'RewriteRule',
+										'RewriteLock': ''
+									}
+									for(var key in list){
+										document.write('<li class="clearFix"><div class="left">'+key+'</div><div class="right">'+list[key]+'</div></li>');
+									}
+								</script>
+							</ul>
+						</div>
+					</td>
+					<td class="sheet-space"></td>
+					<td class="sheets">
+						<div class="sheet-output">
+							<h3>Regular Expressions Syntax</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = {
+										'^': 'Start of string',
+										'$': 'End of string',
+										'.': 'Any single character',
+										'(a|b)': 'a or b',
+										'(...)': 'Group section',
+										'[abc]': 'In range (a, b or c)',
+										'[^abc]': 'Not in range',
+										'\\s': 'White space',
+										'a?': 'Zero or one of a',
+										'a*': 'Zero or more of a',
+										'a*?': 'Zero or more, ungreedy',
+										'a+': 'One or more of a',
+										'a+?': 'One or more, ungreedy',
+										'a{3}': 'Exactly 3 of a',
+										'a{3,}': '3 or more of a',
+										'a{,6}': 'Up to 6 of a',
+										'a{3,6}': '3 to 6 of a',
+										'a{3,6}?': '3 to 6 of a, ungreedy',
+										'\\': 'Escape character',
+										'[:punct:]': 'Any punctuation symbol',
+										'[:space:]': 'Any space character',
+										'[:blank:]': 'Space or tab'
+									}
+									for(var key in list){
+										document.write('<li class="clearFix"><div class="left">'+key+'</div><div class="right">'+list[key]+'</div></li>');
+									}
+								</script>
+								<li>There's an excellent regular expression tester at: <a href="http://regexpal.com/">http://regexpal.com/</a></li>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>mod_rewrite Server Variables: HTTP Headers</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = [
+										'%{HTTP_USER_AGENT}',
+										'%{HTTP_REFERER}',
+										'%{HTTP_COOKIE}',
+										'%{HTTP_FORWARDED}',
+										'%{HTTP_HOST}',
+										'%{HTTP_PROXY_CONNECTION}',
+										'%{HTTP_ACCEPT}'
+									];
+									for (var i = 0; i < list.length; i++) {
+										document.write('<li>'+list[i]+'</li>');
+									};
+								</script>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>mod_rewrite Server Variables: Server Internals</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = [
+										'%{DOCUMENT_ROOT}',
+										'%{SERVER_ADMIN}',
+										'%{SERVER_NAME}',
+										'%{SERVER_ADDR}',
+										'%{SERVER_PORT}',
+										'%{SERVER_PROTOCOL}',
+										'%{SERVER_SOFTWARE}'
+									];
+									for (var i = 0; i < list.length; i++) {
+										document.write('<li>'+list[i]+'</li>');
+									};
+								</script>
+							</ul>
+						</div>
+					</td>
+					<td class="sheet-space"></td>
+					<td class="sheets">
+						<div class="sheet-output">
+							<h3>mod_rewrite Sample Rule: Site Moved</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = [
+										'# Site moved permanently',
+										'RewriteCond %{HTTP_HOST} ^www.domain.com$ [NC]',
+										'RewriteRule ^(.*)$ <a href="http://www.domain2.com/$1">http://www.domain2.com/$1</a> [R=301,L]',
+										'Rewrites domain.com to domain2.com'
+									];
+									for (var i = 0; i < list.length; i++) {
+										document.write('<li>'+list[i]+'</li>');
+									};
+								</script>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>mod_rewrite Sample Rule: Temporary Page Move</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = [
+										'# Page has moved temporarily',
+										'RewriteRule ^page.html$ new_page.html [R,NC,L]',
+										'Rewrites domain.com/page.html to domain.com/new_page.html'
+									];
+									for (var i = 0; i < list.length; i++) {
+										document.write('<li>'+list[i]+'</li>');
+									};
+								</script>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>mod_rewrite Sample Rule: Nice URLs</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = [
+										'# Nice URLs (no query string)',
+										'RewriteRule ^([A-Za-z0-9-]+)/?$ categories.php?name=$1 [L]',
+										'Rewrites domain.com/category-name-1/ to domain.com/categories.php?name=category-name-1'
+									];
+									for (var i = 0; i < list.length; i++) {
+										document.write('<li>'+list[i]+'</li>');
+									};
+								</script>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>mod_rewrite Server Variables: Special</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = [
+										'%{API_VERSION}',
+										'%{THE_REQUEST}',
+										'%{REQUEST_URI}',
+										'%{REQUEST_FILENAME}',
+										'%{IS_SUBREQ}',
+										'%{HTTPS}'
+									];
+									for (var i = 0; i < list.length; i++) {
+										document.write('<li>'+list[i]+'</li>');
+									};
+								</script>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>mod_rewrite Server Variables: Request</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = [
+										'%{REMOTE_ADDR}',
+										'%{REMOTE_HOST}',
+										'%{REMOTE_PORT}',
+										'%{REMOTE_USER}',
+										'%{REMOTE_IDENT}',
+										'%{REQUEST_METHOD}',
+										'%{SCRIPT_FILENAME}',
+										'%{PATH_INFO}',
+										'%{QUERY_STRING}',
+										'%{AUTH_TYPE}'
+									];
+									for (var i = 0; i < list.length; i++) {
+										document.write('<li>'+list[i]+'</li>');
+									};
+								</script>
+							</ul>
+						</div>
+						<div class="sheet-output">
+							<h3>mod_rewrite Server Variables: Time</h3>
+							<ul class="list">
+								<script type="text/javascript">
+									var list = [
+										'%{TIME_YEAR}',
+										'%{TIME_MON}',
+										'%{TIME_DAY}',
+										'%{TIME_HOUR}',
+										'%{TIME_MIN}',
+										'%{TIME_SEC}',
+										'%{TIME_WDAY}',
+										'%{TIME}'
+									];
+									for (var i = 0; i < list.length; i++) {
+										document.write('<li>'+list[i]+'</li>');
+									};
+								</script>
+							</ul>
+						</div>
+					</td>
+				</tr>	
+			</tbody>
+		</table>
+	</div>
+
+	<script src="js/sheetOutput.js"></script>
+</body>
+</html>

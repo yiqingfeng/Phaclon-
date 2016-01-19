@@ -1,0 +1,123 @@
+/* css reset */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #dddfdd;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif;
+    /*font-size: 80%;*/
+    /*line-height: 1.7;*/
+    color: #46473b;
+}
+
+.container{
+	box-sizing: border-box;
+	width: 980px;
+	margin: 20px auto 0;
+}
+
+.g-doc{
+	margin-bottom: 20px;
+	padding: 0 20px 20px;
+	background-color: #fff;
+	border-top: 3px solid #B0BA5A;
+}
+
+.title{
+	margin: 10px 0 0;
+	border-bottom: 1px dotted #e0e4cc; 
+}
+.title h1{
+	margin: 0 20px 6px;
+	font-size: 24px;
+	color: #86C0D8;
+}
+
+.link{
+	margin-top: 10px;
+}
+.link a{
+	color: #86C0D8;
+	text-decoration: none;
+}
+.link a:hover{
+	color: #618B9C;
+	text-decoration: underline;
+}
+
+/* 样式输出 */
+.m-sheet-output{
+	width: 100%;
+	margin-top: 10px;
+}
+.m-sheet-output .clearFix:after{
+	content: '.';
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.m-sheet-output .clearFix{
+	zoom: 1;
+}
+.m-sheet-output .sheets{
+	width: 32%;
+	vertical-align: top;
+}
+.m-sheet-output .sheets .sheet-output:not(:first-child){
+	margin-top: 12px;
+}
+.m-sheet-output .sheet-space{
+	width: 2%;
+}
+.m-sheet-output .sheet-output{
+	border-radius: 3px;
+	border-bottom: 3px solid #B0BA5A;
+	background-color: #B0BA5A;
+}
+.m-sheet-output .list{
+	border: solid #B0BA5A;
+	border-width: 0 1px;
+	list-style-type: none;
+}
+.m-sheet-output h3{
+	padding: 6px 10px;
+	font-size: 16px;
+	color: #F1F3E2;
+}
+.m-sheet-output .list li:nth-child(odd){
+	background-color: #F0F2E6;
+}
+.m-sheet-output .list li:nth-child(even){
+	background-color: #fff;
+}
+.m-sheet-output .list li{
+    /*padding: 4px 10px 8px;*/
+    padding: 4px 10px 4px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #0192CE;
+}
+.m-sheet-output .list a{
+	border-bottom: 1px dotted #879226;
+	color: #B0BA5A;
+	text-decoration: none;
+}
+.m-sheet-output .list a:hover{
+	border-bottom-style: solid;
+	color: #879226;
+}
+.m-sheet-output .list .left{
+	float: left;
+	width: 30%;
+	box-sizing: border-box;
+	padding-right: 8px;
+	word-break: break-word;
+}
+.m-sheet-output .list .right{
+	float: right;
+	width: 70%;
+}
